@@ -1,8 +1,11 @@
-/**
- * Converts a file size in bytes to a human-readable string
- * @param bytes - The size in bytes
- * @returns A formatted string (e.g., "2.5 MB", "1.2 GB")
- */
+import type { ClassValue } from "clsx";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
 export const formatSize = (bytes: number): string => {
   if (bytes === 0) return '0 B';
 
