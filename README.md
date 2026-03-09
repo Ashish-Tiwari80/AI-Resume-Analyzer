@@ -1,87 +1,142 @@
-# Welcome to React Router!
+# 🤖 AI Resume Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
+An AI-powered web application that analyzes resumes and provides intelligent feedback to help users improve their chances of passing Applicant Tracking Systems (ATS) and getting shortlisted for jobs.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+The application allows users to upload resumes, receive AI-generated analysis, view an ATS score, and download feedback reports.
 
 ---
 
-Built with ❤️ using React Router.
+## 🚀 Features
+
+* 📄 **Resume Upload** – Upload resume files directly through the web interface
+* 🤖 **AI Resume Analysis** – AI evaluates resume content, structure, and skills
+* 📊 **ATS Score Generation** – Shows how well the resume performs with ATS systems
+* 💡 **Detailed Feedback** – Suggestions for improving resume quality
+* 🔐 **User Authentication** – Login and session management using Puter.js
+* ☁️ **Cloud Storage** – Resume files stored securely with Puter.js
+* 👤 **User Profile** – Profile section with logout functionality
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend**
+
+* React
+* TypeScript
+* Tailwind CSS
+* React Router
+
+**State Management**
+
+* Zustand
+
+**Services**
+
+* Puter.js (Authentication, Storage, AI)
+
+**Tools**
+
+* Vite
+* Git & GitHub
+
+---
+
+## 📂 Project Structure
+
+```
+AI-Resume-Analyzer
+│
+├── app
+│   ├── components
+│   ├── routes
+│   ├── constants
+│   ├── types
+│   └── root.tsx
+│
+├── public
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Clone the Repository
+
+```
+git clone https://github.com/Ashish-Tiwari80/AI-Resume-Analyzer.git
+```
+
+### Navigate to the Project Folder
+
+```
+cd AI-Resume-Analyzer
+```
+
+### Install Dependencies
+
+```
+npm install
+```
+
+### Start Development Server
+
+```
+npm run dev
+```
+
+The application will run on:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Resume Upload
+![Upload Resume](screenshots/upload.png)
+
+### AI Resume Analysis
+![AI Analysis](screenshots/analysis.png)
+
+
+---
+
+## 🎯 Use Cases
+
+* Students preparing resumes for internships
+* Job seekers optimizing resumes for ATS systems
+* Developers learning AI-powered web applications
+
+---
+
+## 🔮 Future Improvements
+
+* Resume comparison with job descriptions
+* Keyword optimization suggestions
+* Resume history tracking
+* Advanced analytics dashboard
+
+---
+
+## 👨‍💻 Author
+
+Ashish Tiwari
+
+GitHub:
+https://github.com/Ashish-Tiwari80
+
+---
+
+## 📜 License
+
+This project is open-source and available under the MIT License.
