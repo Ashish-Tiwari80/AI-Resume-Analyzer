@@ -40,8 +40,18 @@ const WipeApp = () => {
 
     return (
         <div>
-            Authenticated as: {auth.user?.username}
-            <div>Existing files:</div>
+            <button
+                className="bg-gray-500 text-white px-4 py-2 rounded-md cursor-pointer mb-4"
+                onClick={() => navigate("/")}
+            >
+                ← Back
+            </button>
+            <div>Authenticated as: {auth.user?.username}</div>
+            {files.length === 0 ? (
+                <div>No files found!</div>
+            ) : (
+                <div>Existing files:</div>
+            )}
             <div className="flex flex-col gap-4">
                 {files.map((file) => (
                     <div key={file.id} className="flex flex-row gap-4">
