@@ -4,6 +4,8 @@ An AI-powered web application that analyzes resumes and provides intelligent fee
 
 The application allows users to upload resumes, receive AI-generated analysis, view an ATS score, and download feedback reports.
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://ai-resume-analyzer-three-taupe.vercel.app/)
+
 ---
 
 ## 🚀 Features
