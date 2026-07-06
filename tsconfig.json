@@ -3,7 +3,8 @@
     "**/*",
     "**/.server/**/*",
     "**/.client/**/*",
-    ".react-router/types/**/*"
+    ".react-router/types/**/*", 
+    "../ai-resume-analyzer-api/api", "../ai-resume-analyzer-api/index.ts"  
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
