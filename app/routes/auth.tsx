@@ -327,14 +327,13 @@ const Auth = () => {
             )}
 
             {stage === "result" && feedback && (
-              <div className="max-w-md">
-                <FreeAnalysisResult
-                  feedback={feedback}
-                  fileName={fileName}
-                  onReset={reset}
-                  onSignIn={() => scrollTo(loginRef)}
-                />
-              </div>
+              <FreeAnalysisResult
+                feedback={feedback}
+                fileName={fileName}
+                onReset={reset}
+                onSignIn={() => scrollTo(loginRef)}
+                part="left"
+              />
             )}
           </div>
 
@@ -343,9 +342,27 @@ const Auth = () => {
           </p>
         </div>
 
+        <div className="lg:sticky lg:top-24">
           <div className="hidden lg:block animate-in fade-in slide-in-from-right-2 duration-500 delay-150 fill-mode-both">
-            <img src="/images/ats-checker.svg" alt="ATS checker" className="w-full mx-auto" />
+            <img
+              src="/images/ats-checker.svg"
+              alt="ATS checker"
+              className="w-full mx-auto"
+            />
           </div>
+
+          {stage === "result" && feedback && (
+            <div className="mt-6 lg:mt-8">
+              <FreeAnalysisResult
+                feedback={feedback}
+                fileName={fileName}
+                onReset={reset}
+                onSignIn={() => scrollTo(loginRef)}
+                part="right"
+              />
+            </div>
+          )}
+        </div>
       </section>
 
       {/* ── HOW IT WORKS ── */}
@@ -420,8 +437,8 @@ const Auth = () => {
               Want more than a quick score?
             </h2>
             <p className="text-gray-500 text-sm mb-6 max-w-md">
-              Sign in to keep every analysis, match your resume against a
-              real job description, and compare feedback across models.
+              Sign in to keep every analysis, match your resume against a real
+              job description, and compare feedback across models.
             </p>
             <div className="grid grid-cols-2 gap-3">
               {BENEFITS.map((b) => (
@@ -445,7 +462,7 @@ const Auth = () => {
               ))}
             </div>
           </div>
- 
+
           <div className="gradient-border shadow-md transition-shadow duration-300 hover:shadow-lg lg:max-w-sm lg:justify-self-end w-full">
             <section className="flex flex-col gap-4 bg-white rounded-2xl p-5 md:p-6">
               <div className="flex flex-col items-center gap-1 text-center">
@@ -481,7 +498,8 @@ const Auth = () => {
 
       <footer className="border-t border-gray-100 py-6">
         <div className="max-w-6xl mx-auto px-4 md:px-8 text-center text-[11px] text-gray-400">
-          Resumind · Built to help students and job seekers improve their resumes. &copy; 2026 Resumind.
+          Resumind · Built to help students and job seekers improve their
+          resumes. &copy; 2026 Resumind.
         </div>
       </footer>
     </main>
