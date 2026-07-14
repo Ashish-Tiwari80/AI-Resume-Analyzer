@@ -2,7 +2,7 @@
 
 An AI-powered web application that analyzes resumes and provides intelligent feedback to help users improve their chances of passing Applicant Tracking Systems (ATS) and getting shortlisted for jobs.
 
-The application allows users to upload resumes, receive AI-generated analysis, view an ATS score, and download feedback reports.
+The application allows users to upload resumes, receive AI-generated analysis, view an ATS score, and download feedback reports. A **free, no-sign-in analysis mode** is also available for a quick first look before creating an account.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://ai-resume-analyzer-three-taupe.vercel.app/)
 
@@ -17,7 +17,20 @@ The application allows users to upload resumes, receive AI-generated analysis, v
 * 🔐 **User Authentication** – Login and session management using Puter.js
 * ☁️ **Cloud Storage** – Resume files stored securely with Puter.js
 * 👤 **User Profile** – Profile section with logout functionality
+* 🆓 **Free Instant Analysis** – Analyze a resume without signing in, no account required
 
+---
+
+## 🆓 Free Analysis (No Sign-In Required)
+ 
+Try the analyzer instantly without creating an account:
+ 
+1. Go to the **Free Analysis** page from the homepage
+2. Upload a resume (PDF)
+3. Get an instant AI-generated score and feedback — no login, no storage
+
+This mode is ideal for a quick check before signing up for the full experience (resume history, job description matching, and saved reports).
+ 
 ---
 
 ## 🛠 Tech Stack
@@ -28,10 +41,23 @@ The application allows users to upload resumes, receive AI-generated analysis, v
 * TypeScript
 * Tailwind CSS
 * React Router
+* `pdfjs-dist` (client-side PDF text extraction)
 
 **State Management**
 
 * Zustand
+
+**Backend** (free, no-sign-in analysis)
+ 
+* Express.js (Node.js)
+* Google Gemini API (`gemini-2.5-flash`)
+* Deployed as a separate Vercel project from the frontend
+
+**Planned / In Progress** (full authenticated tier)
+ 
+* Clerk (Authentication)
+* Neon DB + Drizzle ORM (Database)
+* Cloudinary (Resume file storage)
 
 **Services**
 
@@ -41,6 +67,7 @@ The application allows users to upload resumes, receive AI-generated analysis, v
 
 * Vite
 * Git & GitHub
+* Vercel (frontend + backend, deployed separately)
 
 ---
 
@@ -101,6 +128,9 @@ http://localhost:5173
 
 ## 📸 Screenshots
 
+### Auth Page
+![Auth Page](screenshots/Auth_page.png)
+
 ### Home Page
 ![Home Page](screenshots/home.png)
 
@@ -123,7 +153,6 @@ http://localhost:5173
 
 ## 🔮 Future Improvements
 
-* Resume comparison with job descriptions
 * Keyword optimization suggestions
 * Resume history tracking
 * Advanced analytics dashboard
