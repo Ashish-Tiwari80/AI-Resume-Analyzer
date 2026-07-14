@@ -14,7 +14,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://ai-resume-analyzer-api-alpha.vercel.app",
+        target: process.env.BACKEND_API_URL,
         changeOrigin: true,
       },
     },

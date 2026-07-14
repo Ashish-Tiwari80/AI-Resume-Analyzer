@@ -182,7 +182,7 @@ const Auth = () => {
 
       setActiveStep("analyze");
 
-      const res = await fetch("/api/analyze", {
+      const res = await fetch(`${process.env.BACKEND_API_URL}/api/analyze`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ resumeText: text }),
