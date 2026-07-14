@@ -498,8 +498,7 @@ const Auth = () => {
 
       <footer className="border-t border-gray-100 py-6">
         <div className="max-w-6xl mx-auto px-4 md:px-8 text-center text-[11px] text-gray-400">
-          Resumind · Built to help students and job seekers improve their
-          resumes. &copy; 2026 Resumind.
+          RESUMIND · Built for students and job seekers to improve their resumes. &copy; 2026 by AASHISH.
         </div>
       </footer>
     </main>
