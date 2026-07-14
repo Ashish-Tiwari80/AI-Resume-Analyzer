@@ -5,4 +5,18 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+  ssr: {
+    noExternal: ['pdfjs-dist'],
+  },
+  optimizeDeps: {
+    exclude: ['pdfjs-dist'],
+  },
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://ai-resume-analyzer-api-alpha.vercel.app",
+        changeOrigin: true,
+      },
+    },
+  },
 });
